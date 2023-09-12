@@ -1,6 +1,6 @@
-$( document ).ready(function() {
+jQuery( document ).ready(function($) {
     const hamburger = $("#hamburger");
-    const mobileMenu = $(".primary-menu");
+    const mobileMenu = $(".menu-menu-1-container");
     const hamToggleOpen = $(".ham #open");
     const hamToggleClose = $(".ham #close");
 
@@ -19,4 +19,14 @@ $( document ).ready(function() {
         hamToggleOpen.show();
         hamToggleClose.hide();
     });
+
+     // Find the <frame> element by its ID or any other suitable selector
+     const frameElement = $(".wp-embedded-content");
+
+     // Remove the inline style attribute
+     frameElement.removeAttr("style");
+
+      // Set the scrolling attribute to "yes"
+    frameElement.attr("scrolling", "yes");
+
 });

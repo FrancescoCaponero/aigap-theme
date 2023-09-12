@@ -1,0 +1,19 @@
+.wp-embedded-content{
+    width: 90% !important;
+    
+    max-width: 1200px !important;
+
+    height: 500px !important;
+    margin-top: 5rem;
+}
+
+blockquote{
+    display: none !important;
+}
+
+.wp-block-embed__wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

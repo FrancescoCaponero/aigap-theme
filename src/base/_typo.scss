@@ -1,3 +1,37 @@
-a{
-    font-size: 1.2rem;
+body, html{
+    font-family: "articulat-cf", sans-serif;
+    font-weight: 100;
 }
+
+.menu-menu-1-container{
+    .menu{
+        .menu-item{
+            font-weight: 200;
+            font-size: 3rem;
+            @include breakpoint-md {
+                font-weight: 300;
+                font-size: 1.2rem;
+                
+            }
+            a{
+                position: relative;
+                &:hover{
+                    &::after{
+                        width: 100%;
+                    }
+                }
+                &::after {    
+                    content: ""; 
+                    position: absolute;
+                    bottom: -.2rem;
+                    left: 0;
+                    width: 0%;
+                    height: 1.2px;
+                    background-color: black;
+                    transition: all .3s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
