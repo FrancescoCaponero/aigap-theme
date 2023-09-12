@@ -27,6 +27,14 @@ if ( ! function_exists( 'theme_setup' ) ) :
             'menu-1' => esc_html__( 'Primary', 'text-domain' ),
         ) );
 
+        // Enable support for Custom Logo.
+        add_theme_support( 'custom-logo', array(
+            'height'      => 250,
+            'width'       => 250,
+            'flex-width'  => true,
+            'flex-height' => true,
+        ) );
+
         // Switch default core markup to output valid HTML5.
         add_theme_support( 'html5', array(
             'search-form',

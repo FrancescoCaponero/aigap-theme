@@ -1,17 +1,22 @@
-function toggleMenu() {
-    const nav = document.getElementById('site-navigation');
-    const hamburger = document.querySelector('.hamburger');
-    const closeMenu = document.querySelector('.close-menu');
+$( document ).ready(function() {
+    const hamburger = $("#hamburger");
+    const mobileMenu = $(".primary-menu");
+    const hamToggleOpen = $(".ham #open");
+    const hamToggleClose = $(".ham #close");
 
-    if (nav.style.display === 'none' || nav.style.display === '') {
-        nav.style.display = 'flex';
-        nav.classList.add('active');
-        hamburger.style.display = 'none';
-        closeMenu.style.display = 'block';
-    } else {
-        nav.style.display = 'none';
-        nav.classList.remove('active');
-        hamburger.style.display = 'block';
-        closeMenu.style.display = 'none';
-    }
-}
+    // Initially, set the close icon to be hidden
+    hamToggleClose.hide();
+
+    // Toggle the mobile menu when the hamburger icon is clicked
+    hamburger.on("click", function() {
+        mobileMenu.toggleClass("active");
+        hamToggleOpen.toggle();
+        hamToggleClose.toggle();
+    });
+
+    $(".primary-menu a").on("click", function() {
+        mobileMenu.removeClass("active");
+        hamToggleOpen.show();
+        hamToggleClose.hide();
+    });
+});

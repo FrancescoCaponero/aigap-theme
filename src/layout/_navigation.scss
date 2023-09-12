@@ -1,11 +1,21 @@
-       /* Hamburger & Close Icon */
-       .menu-toggle {
-        cursor: pointer;
-        font-size: 30px;
+    .custom-logo {
+        transform: scale(1);
+        transition: transform 0.25s ease; 
+        &:hover {
+            transform: scale(1.1); 
+        }
     }
-    
-    .hamburger, .close-menu {
-        display: none;  /* Both icons are hidden by default */
+    .site-header{
+        display: flex;
+        justify-content: center;
+        .main-navigation{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: .2rem 2rem;
+            max-width: 1200px;
+            width: 90%;
+        }
     }
     
     /* Full Page Menu Styles */
@@ -15,15 +25,33 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: white;
         z-index: 9999;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
-    @media (max-width: 768px) {
-        .hamburger {
-            display: block;  /* Show hamburger icon on mobile */
+
+
+    .menu-menu-1-container{
+        ul{
+            display: flex;
+            li{
+                margin-left: .8rem;
+            }
+        }
+    }
+
+    .ham{
+        display: block;
+        position: relative;
+        #open,#close{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        @include breakpoint-md{
+            display: none;
         }
     }

@@ -1,8 +1,15 @@
 // Base
 @import "base/normalize";
 @import "base/base";
+@import "base/mixins";
+@import "base/typo";
 // Layout
 @import "layout/navigation";
+// pages
+@import "pages/footer";
+@import "pages/page";
+// Utilities
+@import "utils/utilities";
 
 
 

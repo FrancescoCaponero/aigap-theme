@@ -2,3 +2,4 @@ node_modules
 package-lock.json
 dist/style.css
 info.txt
+custom-logo.png
